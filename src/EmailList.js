@@ -8,9 +8,9 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import KeyboardHideIcon from "@mui/icons-material/KeyboardHide";
 import SettingsIcon from "@mui/icons-material/Settings";
-import InboxIcon from '@mui/icons-material/Inbox';
-import PeopleIcon from '@mui/icons-material/People';
-import LocalOfferIcon from '@mui/icons-material/LocalOffer';
+import InboxIcon from "@mui/icons-material/Inbox";
+import PeopleIcon from "@mui/icons-material/People";
+import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import Section from "./Section";
 
 function EmailList() {
@@ -48,7 +48,16 @@ function EmailList() {
       <div className="emailList__sections">
         <Section Icon={InboxIcon} title="primary" color="red" selected />
         <Section Icon={PeopleIcon} title="Social" color="#1a73e8" selected />
-        <Section Icon={LocalOfferIcon} title="Promotions" color="green" selected />
+        <Section
+          Icon={LocalOfferIcon}
+          title="Promotions"
+          color="green"
+          selected
+        />
+      </div>
+
+      <div className="emailList__list">
+
       </div>
     </div>
   );
