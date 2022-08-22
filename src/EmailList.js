@@ -12,6 +12,7 @@ import InboxIcon from "@mui/icons-material/Inbox";
 import PeopleIcon from "@mui/icons-material/People";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import Section from "./Section";
+import EmailRow from "./EmailRow";
 
 function EmailList() {
   return (
@@ -57,7 +58,12 @@ function EmailList() {
       </div>
 
       <div className="emailList__list">
-
+        <EmailRow
+          title="Scrubs"
+          subject="1st episode"
+          description="This is the test"
+          time="5:57 PM"
+        />
       </div>
     </div>
   );
