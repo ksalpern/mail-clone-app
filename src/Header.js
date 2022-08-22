@@ -6,7 +6,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import AppsIcon from '@mui/icons-material/Apps';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 
 function Header() {
   return (
@@ -32,7 +32,7 @@ function Header() {
         <IconButton>
           <NotificationsIcon />
         </IconButton>
-        <AccountCircleIcon/>
+        <PersonOutlineIcon/>
       </div>
     </div>
   );
