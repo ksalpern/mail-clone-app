@@ -8,6 +8,8 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import KeyboardHideIcon from "@mui/icons-material/KeyboardHide";
 import SettingsIcon from "@mui/icons-material/Settings";
+import InboxIcon from '@mui/icons-material/Inbox';
+import Section from "./Section";
 
 function EmailList() {
   return (
@@ -26,7 +28,7 @@ function EmailList() {
           </IconButton>
         </div>
         <div className="emailList__settingsRight">
-        <IconButton>
+          <IconButton>
             <ChevronLeftIcon />
           </IconButton>
           <IconButton>
@@ -42,7 +44,7 @@ function EmailList() {
       </div>
 
       <div className="emailList__sections">
-
+        <Section Icon={InboxIcon} title="primary" color="red" selected />
       </div>
     </div>
   );
