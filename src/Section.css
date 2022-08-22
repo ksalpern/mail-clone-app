@@ -9,7 +9,17 @@
     border-width: 0 !important;
 }
 
+.section > h4{
+    font-size: 14px;
+    margin-left: 14px;
+}
+
 .section--selected{
+    background-color: whitesmoke;
+    border-width: 3px !important;
+}
+
+.section:hover{
     background-color: whitesmoke;
     border-width: 3px !important;
 }
