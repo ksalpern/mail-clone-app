@@ -10,6 +10,9 @@ import WatchLaterIcon from "@mui/icons-material/WatchLater";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import LabelImportantIcon from "@mui/icons-material/LabelImportant";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import UnfoldMoreIcon from '@mui/icons-material/UnfoldMore';
+import PrintIcon from '@mui/icons-material/Print';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { useNavigate } from "react-router-dom";
 
 function Mail() {
@@ -22,32 +25,52 @@ function Mail() {
           <IconButton onClick={() => navigate('/')}>
             <ArrowBackIosNewIcon />
           </IconButton>
+
           <IconButton>
             <MoveToInboxIcon />
           </IconButton>
+
           <IconButton>
             <ErrorIcon />
           </IconButton>
+
           <IconButton>
             <DeleteIcon />
           </IconButton>
+
           <IconButton>
             <EmailIcon />
           </IconButton>
+
           <IconButton>
             <WatchLaterIcon />
           </IconButton>
+
           <IconButton>
             <CheckCircleIcon />
           </IconButton>
+
           <IconButton>
             <LabelImportantIcon />
           </IconButton>
+
           <IconButton>
             <MoreVertIcon />
           </IconButton>
         </div>
-        <div className="mail__toolsRight"></div>
+        <div className="mail__toolsRight">
+        <IconButton>
+            <UnfoldMoreIcon />
+          </IconButton>
+          
+          <IconButton>
+            <PrintIcon />
+          </IconButton>
+          
+          <IconButton>
+            <ExitToAppIcon />
+          </IconButton>
+        </div>
       </div>
     </div>
   );
