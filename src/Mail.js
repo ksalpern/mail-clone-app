@@ -10,9 +10,9 @@ import WatchLaterIcon from "@mui/icons-material/WatchLater";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import LabelImportantIcon from "@mui/icons-material/LabelImportant";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import UnfoldMoreIcon from '@mui/icons-material/UnfoldMore';
-import PrintIcon from '@mui/icons-material/Print';
-import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+import UnfoldMoreIcon from "@mui/icons-material/UnfoldMore";
+import PrintIcon from "@mui/icons-material/Print";
+import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import { useNavigate } from "react-router-dom";
 
 function Mail() {
@@ -22,7 +22,7 @@ function Mail() {
     <div className="mail">
       <div className="mail__tools">
         <div className="mail__toolsLeft">
-          <IconButton onClick={() => navigate('/')}>
+          <IconButton onClick={() => navigate("/")}>
             <ArrowBackIosNewIcon />
           </IconButton>
 
@@ -59,17 +59,29 @@ function Mail() {
           </IconButton>
         </div>
         <div className="mail__toolsRight">
-        <IconButton>
+          <IconButton>
             <UnfoldMoreIcon />
           </IconButton>
-          
+
           <IconButton>
             <PrintIcon />
           </IconButton>
-          
+
           <IconButton>
             <ExitToAppIcon />
           </IconButton>
+        </div>
+      </div>
+      <div className="mail__body">
+        <div className="mail__bodyHeader">
+          <h2>Subject</h2>
+          <LabelImportantIcon className="mail__important" />
+          <p>Title</p>
+          <p className="mail__time">4:24 PM</p>
+        </div>
+
+        <div className="mail__message">
+          <p>This is a message</p>
         </div>
       </div>
     </div>
