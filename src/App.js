@@ -20,8 +20,9 @@ function App() {
             <Route path="/mail" element={<Mail />} />
             <Route path="/" element={<EmailList />} />
           </Routes>
-          <SendMail/>
+        
         </div>
+          <SendMail/>
       </div>
     </Router>
   );
