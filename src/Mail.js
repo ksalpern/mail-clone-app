@@ -7,16 +7,19 @@ import ErrorIcon from "@mui/icons-material/Error";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EmailIcon from "@mui/icons-material/Email";
 import WatchLaterIcon from "@mui/icons-material/WatchLater";
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import LabelImportantIcon from '@mui/icons-material/LabelImportant';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import LabelImportantIcon from "@mui/icons-material/LabelImportant";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
+import { useNavigate } from "react-router-dom";
 
 function Mail() {
+  const navigate = useNavigate();
+
   return (
     <div className="mail">
       <div className="mail__tools">
         <div className="mail__toolsLeft">
-          <IconButton>
+          <IconButton onClick={() => navigate('/')}>
             <ArrowBackIosNewIcon />
           </IconButton>
           <IconButton>
