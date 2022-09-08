@@ -7,7 +7,12 @@ import { closeSendMessage } from "./features/mailSlice";
 import { useDispatch } from "react-redux";
 
 function SendMail() {
-  const { register, handleSubmit, watch, errors } = useForm();
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
   const dispatch = useDispatch();
 
   const onSubmit = (formData) => {
@@ -20,7 +25,7 @@ function SendMail() {
         <h3>New message</h3>
         <CloseIcon
           className="sendMail__close"
-          onClick={() => dispatch(closeSendMessage)}
+          onClick={() => dispatch(closeSendMessage())}
         />
       </div>
 
@@ -28,8 +33,8 @@ function SendMail() {
         <input
           name="to"
           placeholder="To"
-          type="text"
-          ref={register({ required: true })}
+          type="email"
+          {...register("to", { required: true })}
         />
         {errors.to && <p className="sendMail__error">To is Required!</p>}
 
@@ -37,7 +42,7 @@ function SendMail() {
           name="subject"
           placeholder="Subject"
           type="text"
-          ref={register({ required: true })}
+          {...register("subject", { required: true })}
         />
         {errors.subject && (
           <p className="sendMail__error">Subject is Required!</p>
@@ -48,7 +53,7 @@ function SendMail() {
           placeholder="Message..."
           className="sendMail__message"
           type="text"
-          ref={register({ required: true })}
+          {...register("message", { required: true })}
         />
         {errors.message && (
           <p className="sendMail__error">Message is Required!</p>
