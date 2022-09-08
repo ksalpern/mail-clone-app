@@ -3,9 +3,12 @@ import "./SendMail.css";
 import CloseIcon from "@mui/icons-material/Close";
 import { Button } from "@mui/material";
 import { useForm } from "react-hook-form";
+import { closeSendMessage } from "./features/mailSlice";
+import { useDispatch } from "react-redux";
 
 function SendMail() {
   const { register, handleSubmit, watch, errors } = useForm();
+  const dispatch = useDispatch();
 
   const onSubmit = (formData) => {
     console.log(formData);
@@ -15,7 +18,10 @@ function SendMail() {
     <div className="sendMail">
       <div className="sendMail__header">
         <h3>New message</h3>
-        <CloseIcon className="sendMail__close" />
+        <CloseIcon
+          className="sendMail__close"
+          onClick={() => dispatch(closeSendMessage)}
+        />
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -33,7 +39,9 @@ function SendMail() {
           type="text"
           ref={register({ required: true })}
         />
-        {errors.subject && <p className="sendMail__error">Subject is Required!</p>}
+        {errors.subject && (
+          <p className="sendMail__error">Subject is Required!</p>
+        )}
 
         <input
           name="message"
@@ -42,7 +50,9 @@ function SendMail() {
           type="text"
           ref={register({ required: true })}
         />
-        {errors.message && <p className="sendMail__error">Message is Required!</p>}
+        {errors.message && (
+          <p className="sendMail__error">Message is Required!</p>
+        )}
 
         <div className="sendMail__options">
           <Button
