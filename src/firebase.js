@@ -9,7 +9,7 @@ const firebaseConfig = {
   storageBucket: "mail-clone-app-2e95f.appspot.com",
   messagingSenderId: "899262684145",
   appId: "1:899262684145:web:f15171b6bc7e60c2430250",
-  measurementId: "G-FNK4XKBXY3",
+  measurementId: "G-FNK4XKBXY3"
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
